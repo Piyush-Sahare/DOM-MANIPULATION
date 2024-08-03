@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <h1>Student Registration System</h1>
+        <p>Register student details, edit, and delete records efficiently.</p>
+        <nav>
+            <a href="../html/students.html">View Registered Students</a>
+        </nav>
     </header>
     <main>
         <section class="registration-form">
@@ -16,22 +21,18 @@
             <form id="studentForm">
                 <label for="studentName">Student Name:</label>
                 <input type="text" id="studentName" name="studentName" required>
-                
+
                 <label for="studentId">Student ID:</label>
                 <input type="text" id="studentId" name="studentId" required>
-                
+
                 <label for="emailId">Email ID:</label>
                 <input type="email" id="emailId" name="emailId" required>
-                
+
                 <label for="contactNo">Contact No:</label>
                 <input type="text" id="contactNo" name="contactNo" required>
-                
+
                 <button type="submit">Register</button>
             </form>
-        </section>
-        <section class="student-records">
-            <h2>Registered Students</h2>
-            <div id="studentList"></div>
         </section>
     </main>
     <script src="../javascript/script.js"></script>
