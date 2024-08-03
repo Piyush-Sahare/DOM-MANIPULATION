@@ -43,16 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Function to check if there are any students before rendering students.html
-    function checkForStudents() {
-        if (window.location.pathname.includes('students.html') && students.length === 0) {
-            alert('No students registered. Redirecting to registration page.');
-            window.location.href = 'index.html';
-        }
+    // Function to check for duplicate students by student ID, email ID, or contact number
+    function findDuplicates(studentId, emailId, contact) {
+        let duplicateFields = [];
+
+        students.forEach(student => {
+            if (student.id === studentId) duplicateFields.push('Student ID');
+            if (student.email === emailId) duplicateFields.push('Email ID');
+            if (student.contact === contact) duplicateFields.push('Contact No');
+        });
+
+        return duplicateFields;
     }
 
     // Function to add a new student
     function addStudent(student) {
+        const duplicateFields = findDuplicates(student.id, student.email, student.contact);
+        if (duplicateFields.length > 0) {
+            alert(`A student with the following field(s) already exists: ${duplicateFields.join(', ')}.`);
+            return;
+        }
         students.push(student);
         localStorage.setItem('students', JSON.stringify(students));
         if (studentForm) {
@@ -125,6 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 window.location.href = 'students.html';
             };
+        }
+    }
+
+    // Function to check if there are any students before rendering students.html
+    function checkForStudents() {
+        if (window.location.pathname.includes('students.html') && students.length === 0) {
+            alert('No students registered. Redirecting to registration page.');
+            window.location.href = 'index.html';
         }
     }
 
