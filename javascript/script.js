@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const index = e.target.dataset.index; // Get the index of the student to edit
                 const student = students[index];
                 // Redirect to the registration page with student details in the query parameters
-                window.location.href = `index.html?edit=${index}&name=${encodeURIComponent(student.name)}&id=${encodeURIComponent(student.id)}&email=${encodeURIComponent(student.email)}&contact=${encodeURIComponent(student.contact)}`;
+                window.location.href = `../index.html?edit=${index}&name=${encodeURIComponent(student.name)}&id=${encodeURIComponent(student.id)}&email=${encodeURIComponent(student.email)}&contact=${encodeURIComponent(student.contact)}`;
             } else if (e.target.classList.contains('delete')) {
                 const index = e.target.dataset.index; // Get the index of the student to delete
                 deleteStudent(index); // Delete the student
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkForStudents() {
         if (window.location.pathname.includes('students.html') && students.length === 0) {
             alert('No students registered. Redirecting to registration page.');
-            window.location.href = 'index.html'; // Redirect if no students are registered
+            window.location.href = '../index.html'; // Redirect if no students are registered
         }
     }
 
