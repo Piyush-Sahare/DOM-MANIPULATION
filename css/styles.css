@@ -1,143 +1,165 @@
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Sets the font for the entire page */
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: #333;
+    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%); /* Background gradient for visual appeal */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    box-sizing: border-box;
+    min-height: 100vh; /* Ensures the content fills at least the full height of the viewport */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    background-color: white; 
+    color: rgb(0, 0, 0); 
+    padding: 2rem; 
+    text-align: center; 
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    margin-bottom: 2rem; /* Space below the header */
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Limits the maximum width */
 }
 
+header:hover {
+    transform: scale(1.05); /* Slightly increases the size on hover */
+    transition: .5s; /* Smooth transition effect */
+}
+
+header nav a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Main Content Styles */
 main {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    max-width: 800px;
+    display: flex; 
+    align-items: center; 
+    width: 60%;
+    max-width: 800px; 
 }
 
+main:hover {
+    transform: scale(1.01); /* Slightly increases the size on hover */
+    transition: .5s; /* Smooth transition effect */
+}
+
+/* Form and Records Container Styles */
 .registration-form,
 .student-records {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+    padding: 2rem; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Space below each section */
 }
 
+/* Headings within Forms and Records */
 .registration-form h2,
 .student-records h2 {
-    margin-top: 0;
-    color: #333;
+    margin-top: 0; 
+    color: #333; 
 }
 
+/* Form Styles */
 form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1rem;
-    align-items: center;
+    display: grid; /* Grid layout for the form */
+    grid-template-columns: 1fr 2fr; /* Two columns: labels and inputs */
+    grid-gap: 1rem; 
+    align-items: center; 
 }
 
 form label {
-    font-weight: bold;
-    color: #444;
+    font-weight: bold; 
+    color: #444; 
 }
 
 form input {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-    font-size: 1rem;
+    padding: 0.75rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+    font-size: 1rem; 
 }
 
 form input:focus {
-    border-color: #4CAF50;
-    outline: none;
+    border-color: #4CAF50; 
+    outline: none; 
 }
 
 form button {
-    grid-column: 2 / 3;
-    padding: 0.75rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    grid-column: 2 / 3; 
+    padding: 0.75rem; 
+    background-color: #000000; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; 
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
 form button:hover {
-    background-color: #45a049;
+    transform: scale(1.05); /* Slightly increases size on hover */
+    transition: .5s;
 }
 
+/* Student Records Table Styles */
 .student-records table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 1rem; 
 }
 
-.student-records th, .student-records td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.student-records th,
+.student-records td {
+    padding: 0.75rem; /* Padding inside table cells */
+    text-align: left; /* Left-align text */
+    border-bottom: 1px solid #ddd; 
 }
 
 .student-records th {
-    background-color: #f8f8f8;
-    color: #555;
-    font-weight: bold;
+    background-color: #f8f8f8; 
+    color: #555; 
+    font-weight: bold; 
 }
 
 .student-records tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; 
 }
 
 .student-records tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Slightly darker background on row hover */
 }
 
+/* Button Styles in Student Records */
 .student-records button {
-    padding: 0.5rem 1rem;
-    margin: 0.25rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem; 
+    margin: 0.25rem; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
 .student-records .edit {
-    background-color: #ff9800;
-    color: white;
+    background-color: #ff9800; 
+    color: white; 
 }
 
 .student-records .edit:hover {
-    background-color: #e68a00;
+    background-color: #e68a00; 
 }
 
 .student-records .delete {
-    background-color: #f44336;
-    color: white;
+    background-color: #f44336; 
+    color: white; 
 }
 
 .student-records .delete:hover {
-    background-color: #d32f2f;
+    background-color: #d32f2f; 
 }
