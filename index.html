@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and links to stylesheets and fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header section with a title and a description -->
+        <h1>Student Registration System</h1>
+        <p>Register student details, edit, and delete records efficiently.</p>
+        <!-- Navigation bar with a link to view registered students -->
+        <nav>
+            <a href="../html/students.html">View Registered Students</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Main content section with a form for registering new students -->
+        <section class="registration-form">
+            <h2>Register a New Student</h2>
+            <form id="studentForm">
+                <!-- Input field for student name -->
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+
+                <!-- Input field for student ID -->
+                <label for="studentId">Student ID:</label>
+                <input type="number" id="studentId" name="studentId" required>
+
+                <!-- Input field for email ID -->
+                <label for="emailId">Email ID:</label>
+                <input type="email" id="emailId" name="emailId" required>
+
+                <!-- Input field for contact number -->
+                <label for="contactNo">Contact No:</label>
+                <input type="number" id="contactNo" name="contactNo" required>
+
+                <!-- Submit button to register the student -->
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <!-- Link to external JavaScript file for additional functionality -->
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
